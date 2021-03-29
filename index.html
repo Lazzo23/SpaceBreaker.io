@@ -1,0 +1,89 @@
+<!DOCTYPE HTML> 
+<html> 
+  <head> 
+    <title>SpaceBreaker</title> 
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+
+    
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
+  </head> 
+  <body onload="nastavi()" class="fade-in"> 
+    <!-- Ozadje -->
+    <div id="particle-container">
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div>
+  </div>
+
+    <!-- Main Container -->
+    <div id="container">
+
+      <!-- Container Čas -->
+      <div id="cas_container">
+        <span id="cas">00:00</span>
+      </div>
+
+      <h1 id="text">SpaceBreaker</h1>
+
+      <!-- Nastavitve igre -->
+      <form id="nastavitve" onsubmit="return false">
+          <div class="a1">
+            <p>VRSTICE</p>
+            <input id="vrstice" type="number" value="5" min="3" max="10"/>
+          </div>
+    
+          <div class="a1">
+            <p>STOLPCI</p>
+            <input id="stolpci" type="number" value="10" min="5" max="15"/>
+          </div>
+    
+          <div class="a1">
+            <p>TEŽAVNOST</p>
+            <input id="tezavnost" type="number" value="1" min="1" max="3"/></br>
+          </div>
+          <button id="submit" type='button'>ZAČNI IGRO</button> 
+      </form>
+      
+      <!-- Container Življenja -->
+      <div id="lives-container" >
+        <img src="icon.png" class="lives" id="5"></br>
+        <img src="icon.png" class="lives" id="4"></br>
+        <img src="icon.png" class="lives" id="3"></br>
+        <img src="icon.png" class="lives" id="2"></br>
+        <img src="icon.png" class="lives" id="1">
+      </div>
+
+      <!-- Container Točke -->
+      <div id="tocke_container">
+        <span id="tocke">0</span>
+      </div>
+
+      <!-- Container Opis Planeta -->
+      <div id="opisplaneta">
+      </div>
+
+      <!-- Canvas -->
+      <canvas id="canvas" width="450" height="450"
+      ></canvas>
+  </div>
+  <script src="script.js"></script>
+  </body>  
+</html> 
