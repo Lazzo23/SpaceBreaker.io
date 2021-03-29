@@ -100,7 +100,7 @@ function prednastavi(){
       confirmButtonText: 'Začni'
     }).then((result) => {
       ime=result.value;
-      if(!ime || ime.trim() === " "||ime.includes(" ")||ime.length()>10)
+      if(!ime || ime.trim() === " "||ime.includes(" "))
         preveri();
       else{
         efekt2.play();
