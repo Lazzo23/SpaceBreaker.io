@@ -519,6 +519,7 @@ function drawIt(vrstice,stolpci,tezavnost) {
             container.style.display="none";
 
             //LocalStorage v akciji
+          if(!window.localStorage.length==0){
             a=localStorage.getItem("ime");
             b=localStorage.getItem("tocke");
             c=localStorage.getItem("timer");
@@ -556,6 +557,7 @@ function drawIt(vrstice,stolpci,tezavnost) {
               if(tableA[i]!=null&&tableA[i]!=undefined)
               niz=niz+""+tableA[i]+" "+tableB[i]+"pts "+tableC[i]+"s "+"\n";
             }
+          }
 
             Swal.fire({
               icon: 'error',
